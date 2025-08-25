@@ -1,0 +1,31 @@
+<head>
+    <title>DOM Selection Example</title>
+    <style>
+        .highlight { font-weight: bold;}
+        .mandatory { color: red;}
+    </style>
+</head>
+<body>
+    <h1>Form Validation</h1>
+    <p class="mandatory">* Name is required</p>
+    <p class="mandatory">* Email is required</p>
+
+    <ul>
+        <li class="mandatory">*Agree to Terms</li>
+        <li>Subscribe to newsletter</li>
+    </ul>
+    <script>
+        let mandatoryItems = document.getElementsByClassName("mandatoyr");
+        for(let i=0; i<mandatoryItems.length; i++){
+            mandatoryItems[i].style.backgroundcolor = "#ffeeee";
+        }
+        let headings = document.getElementsByTagName("h1");
+        for( let i =0; i < headings.length; i++){
+            headings[i].style.color = "blue"
+        }
+        let listItems = document.querySelectorAll("li.mandatory");
+        listItems.forEach(item => {
+            item.style.fontweight = "bold";
+        });
+    </script>
+</body>
